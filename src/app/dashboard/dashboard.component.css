@@ -1,0 +1,346 @@
+.dashboard {
+  padding: 20px;
+  background: linear-gradient(
+    to bottom,       /* Gradient direction: top to bottom */
+    #16c1f1 30%,     /* Blue color covering the top 30% */
+    #ffffff 30%      /* White color starts at 30% */
+  );
+}
+
+
+  .dashboard-content {
+    display: flex;
+    gap: 15px;
+  }
+  
+/* mmmmmmmmmmmmmmm */
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between items */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333; /* Text color */
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #fafafa; /* Blue text for links */
+  display: flex;
+  align-items: center; /* Align icon and text */
+  gap: 5px; /* Space between icon and text */
+}
+
+
+
+.breadcrumbs mat-icon {
+  font-size: 18px; 
+  color: #fffdfd;
+}
+
+  .billing-header h2 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  /* mmmmmmmmmmmmmmm */
+  
+  .stat-card {
+    padding: 15px;
+    color: rgb(103, 116, 142);
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1;
+    position: relative; /* To position the image absolutely inside the card */
+  }
+  
+  .right-image {
+    position: absolute;
+    top: 50%; 
+    right: 15px; 
+    transform: translateY(-50%); /* Vertically center the image */
+    max-width: 50px;
+    max-height: 50px; 
+  }
+  
+  .stat-card b {
+    font-weight: bold; 
+  }
+  
+  .dashboard-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .sales-by-country
+ {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%; /* Each section takes up half of the container */
+  }
+  .categories {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 48%; /* Each section takes up half of the container */
+  }
+  
+  .sales-by-country h3,
+  .categories h3 {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .sales-by-country table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .sales-by-country th, .sales-by-country td {
+    padding: 10px;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  .sales-by-country th {
+    color: #666;
+  }
+  
+  .sales-by-country tr {
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .sales-by-country img {
+    width: 24px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  .categories .category-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+  }
+  
+  .categories .category-item:last-child {
+    border-bottom: none;
+  }
+  
+  .category-icon {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-right: 10px;
+  }
+  
+ 
+  .category-link {
+    color: #007bff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    margin-left: 58px;
+  }
+  
+  .category-link:hover {
+    text-decoration: underline;
+  }
+  
+
+  .form-container {
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  input {
+    padding: 8px;
+    margin-bottom: 5px;
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #dcdcdc;
+  }
+
+
+
+  /* Reactive for class css here  */
+  .form-container {
+    margin-top: 70px;
+    padding: 20px;
+    background: #fff;
+    color: #666;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%; /* Adjust width of the container */
+    
+    /* Flexbox to center content vertically and horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center;     /* Center content horizontally */
+    height: 290px;           /* Set a fixed height for the container */
+}
+
+form div {
+    display: flex;
+    flex-direction: column; /* Stack label, input, and error message vertically */
+}
+
+label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input {
+    padding: 8px;
+    width: 100%; /* Full width of the parent container */
+    max-width: 300px; /* Limiting max width to 300px */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 110%;
+    border-radius: 5px;
+}
+
+button:disabled {
+    background-color: #dcdcdc;
+}
+
+/* Error messages should appear below the input field */
+small {
+    color: red;
+    font-weight: bold;
+    display: block; /* Ensures error messages are displayed on a new line below the field */
+    margin-top: 5px; /* Adds spacing between the input and error message */
+}
+
+
+
+/* Styling for entries table */
+.entries-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.entries-list th, .entries-list td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.entries-list th {
+    background-color: #f4f4f4;
+}
+
+.entries-list button {
+    margin-left: 10px;
+    padding: 5px 10px;
+}
+
+.form-carousel-wrapper {
+  display: flex;              /* Aligns the form and carousel side by side */
+  gap: 20px;                  /* Adds space between the form and carousel */
+  justify-content: space-between; /* Optional: space out items */
+}
+
+.form-container {
+  width: 45%;                 /* Adjust width of the form container */
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-container {
+  width: 50%;                 /* Adjust width of the carousel container */
+  max-width: 100%;
+  height: 400px;              /* Set height for the carousel */
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.carousel-image {
+  display: none;
+  border-radius: 7px;
+  width: 100%;
+  height: 100%;
+  animation: floatAnimation 4s ease-in-out infinite;
+}
+
+.carousel-image.active {
+  display: block;
+}
+
+.carousel img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  animation: floatAnimation 10s t infinite;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.arrow mat-icon {
+  font-size: 30px;
+}

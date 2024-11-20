@@ -1,0 +1,110 @@
+<header class="header">
+  <div class="search">
+    <mat-icon class="search-icon">search</mat-icon>
+    <input type="text" placeholder="Search..." />
+  </div>
+  <div class="profile">
+    <!-- Sign-In Icon and Text -->
+    <a routerLink="/sign-in" style="color:white;">
+      <mat-icon>person</mat-icon> Sign In
+    </a>
+    <!-- Settings Icon -->
+    <a (click)="toggleSettings()">
+      <mat-icon>settings</mat-icon>
+    </a>
+    
+    <!-- Notifications Icon -->
+    <a (click)="toggleNotifications()">
+      <mat-icon>notifications</mat-icon>
+    </a>
+    <!-- Notifications Pop-up -->
+    <div *ngIf="showNotifications" class="notifications-popup">
+      <ul>
+        <li class="notification-item" *ngFor="let notification of notifications">
+          <img [src]="notification.image" alt="Notification Icon" class="notification-icon" />
+          <div>
+            <span class="notification-text">{{ notification.text }}</span>
+            <div class="notification-time1">
+              <mat-icon class="time-icon">schedule</mat-icon>
+              <span>{{ notification.time }}</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Fixed Settings Icon -->
+  <div class="fixed-settings-icon" (click)="toggleSettings()">
+    <mat-icon>settings</mat-icon>
+  </div>
+
+  
+  <!-- Settings Pop-up -->
+<div *ngIf="showSettings" class="settings-popup">
+  <div class="settings-popup-content">
+    <!-- Header -->
+    <div class="settings-popup-header">
+      <strong>Project Configurator</strong>
+      <mat-icon class="close-icon" (click)="closeSettings()">close</mat-icon>
+    </div>
+    <p style="color:  rgb(52, 71, 103);;">See our dashboard options.</p>
+
+    <!-- Divider -->
+    <hr />
+
+    <!-- Sidenav Colors -->
+    <p class="section-title">Sidenav Colors</p>
+    <div class="color-options">
+      <div class="color-circle" style="background-color: #f44336; "></div>
+      <div class="color-circle" style="background-color: #4caf50;"></div>
+      <div class="color-circle" style="background-color: #2196f3;"></div>
+      <div class="color-circle" style="background-color: #ffeb3b;"></div>
+      <div class="color-circle" style="background-color: #9c27b0;"></div>
+    </div>
+
+    <!-- Sidenav Type -->
+    <p class="section-title">Sidenav Type</p>
+    <p style="font-size: 14px; color: rgb(52, 71, 103); ;">Choose between 2 different sidenav types.</p>
+    <div class="button-options">
+      <button class="filled-button">Dark</button>
+      <button class="outlined-button">Light</button>
+    </div>
+
+    <!-- Navbar Fixed -->
+    <div class="toggle-options">
+      <div class="toggle-option">
+        <span>Navbar Fixed</span>
+        <mat-slide-toggle></mat-slide-toggle>
+      </div>
+      <div class="toggle-option">
+        <span>Sidebar Mini</span>
+        <mat-slide-toggle></mat-slide-toggle>
+      </div>
+      <div class="toggle-option">
+        <span>Light / Dark</span>
+        <mat-slide-toggle></mat-slide-toggle>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+      <button class="blue-button">Buy Now</button>
+      <button class="dark-button">Free Download</button>
+      <button class="outlined-button-gray">View Documentation</button>
+    </div>
+
+    <!-- Footer -->
+    <p class="thanks-message">Thanks for sharing</p>
+    <div class="social-buttons">
+      <div class="social-button twitter">
+        <img src="assets/twitter.png" alt="Twitter" class="social-icon"> Twitter
+      </div>
+      <div class="social-button facebook">
+        <mat-icon>facebook</mat-icon> Facebook
+      </div>
+    </div>
+  </div>
+</div>
+
+</header>

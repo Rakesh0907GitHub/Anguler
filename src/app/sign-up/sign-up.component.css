@@ -1,0 +1,281 @@
+.sign-up-wrapper {
+    display: flex;
+    width: 100%;
+    height: 140vh; /* Full height */
+    overflow: hidden; /* Prevent content overflow */
+
+}
+
+/* for putting the image into page start form here  */
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Retain relative positioning */
+    top: -250px; /* Align image-section to its container */
+    background-color: #f5f5f5;
+}
+
+.image-section img {
+    opacity: 3; 
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* Ensure the image scales properly */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+
+/* Thsis one for the those single row bar (where dashboard, profile and all) css here  */
+.header-row {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; 
+    padding: 9px 12px; 
+    border-radius: 8px; 
+    position: absolute;
+    top: 120px; 
+    width: 70%; 
+    z-index: 10; /* Ensure it appears above other elements */
+    margin-left: 80px;
+}
+
+
+  /* Left section styles */
+  .left-section, .middle-section, .right-section {
+    display: flex;
+    align-items: center; /* Center vertically */
+  }
+  
+  /* General menu item style */
+  .menu-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #f9f7f7; /* Text color */
+    cursor: pointer;
+  }
+  
+  .menu-item mat-icon {
+    margin-right: 5px; 
+    color: #555; 
+  }
+  
+
+  /* Right section button styles */
+  .download-button {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: none; /* Remove default border */
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+
+  /* Thus is the welocme text and css here  */
+  .welcome-container {
+    position: absolute; /* Position it relative to the parent */
+    top: 50%; 
+    left: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    padding: 20px;
+    max-width: 300px; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 8px rgba(252, 250, 250, 0.1); 
+}
+
+  
+  .welcome-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below the heading */
+    color: #faf6f6; ;
+  }
+  
+  .welcome-description {
+    font-size: 16px;
+    line-height: 1.5; /* Improve readability */
+    color: #faf6f6; /* Subtle text color */
+  }
+
+
+
+
+/* for the registration from css start here  */
+  .register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+    width: 400px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute; /* Allows placement relative to the parent */
+    top: 98%; 
+    left: 60%; 
+    transform: translate(-50%, -50%); /* Adjust position to align the center point */
+    opacity: 0.9; /* Optional: Slight transparency for a better overlay effect */
+  }
+  
+  .image-section {
+    flex: 1;
+    position: relative; /* Establishes a positioning context */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.7; /* Optional: Slight transparency for better overlay contrast */
+  }
+  .image-section {
+    flex: 1;
+    position: relative; /* Establishes a positioning context */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+  }
+  
+  .image-section img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0.7; /* Optional: Slight transparency for better overlay contrast */
+  }
+    
+  
+  /* Title */
+  .register-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Icons Section */
+  .icon-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between icons */
+    margin-bottom: 20px;
+  }
+  
+  .icon-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+    cursor: pointer;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  .icon-box:hover {
+    transform: scale(1.1); /* Optional: Slightly enlarge the icon on hover */
+  }
+  /* OR Section */
+  .or-section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .line {
+    flex: 1;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+  }
+  
+  .or-text {
+    margin: 0 10px;
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  /* Input Fields */
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .input-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  /* Terms and Conditions */
+  .terms-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .checkbox {
+    accent-color: #007bff; /* Blue checkbox */
+  }
+  
+  .terms-link {
+    font-weight: bold;
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  /* Sign Up Button */
+  .sign-up-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  /* Already Have an Account */
+  .login-text {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .sign-in-link {
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+  }
+  

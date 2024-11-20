@@ -1,0 +1,40 @@
+/* Ensures the entire viewport height is used */
+.layout {
+    display: flex;
+    min-height: calc(100vh - 60px); /* Subtracts header height */
+  }
+  
+  app-header {
+    height: 60px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  app-sidebar {
+    width: 250px;
+    background-color: #f8f9fa;
+  }
+  
+  .content {
+    flex: 1; /* Takes up remaining space */
+    padding: 20px;
+    background-color: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  router-outlet {
+    flex: 1;
+  }
+  
+  app-footer {
+    padding: 10px 0;
+    text-align: center;
+    color: #6c757d;
+    background-color: #ffffff;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  }
+  

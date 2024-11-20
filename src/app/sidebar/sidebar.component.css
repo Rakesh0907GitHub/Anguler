@@ -1,0 +1,197 @@
+/* Sidebar */
+.sidebar {
+  padding: 20px;
+  background-color: #fdfcfc;
+  width: 250px;
+  border-radius: 10px;
+  margin-left: 15px;
+  box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 15px;
+  left: 0;
+  height: calc(100% - 30px);
+  z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: transform 0.3s ease; /* Smooth slide-in/out effect */
+}
+
+.sidebar.collapsed {
+  transform: translateX(-100%); /* Moves the sidebar off-screen */
+}
+/* Logo Section */
+.logo-section {
+  display: flex;
+  justify-content: left; /* Centers the image horizontally */
+ 
+  margin-bottom: -45px;
+}
+
+.logo-section img {
+  max-width: 20%; /* Ensures the image does not exceed its container width */
+  max-height: 25px; /* Adjusts the height as needed */
+  width: auto; /* Maintains the aspect ratio */
+  border-radius: 10px; /* Optional: Adds rounded corners to the image */
+ 
+}
+
+
+/* Hamburger Menu */
+.hamburger-menu {
+  position: fixed;
+  top:34px;
+  left: 225px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 1100; /* Ensure it's above the sidebar */
+}
+
+.hamburger-menu mat-icon {
+  font-size: 2rem;
+  
+}
+
+/* Optional: Style the scrollbar for a modern look */
+.sidebar::-webkit-scrollbar {
+  width: 8px; 
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #ccc; 
+  border-radius: 4px; 
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa; 
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background-color: #f5f5f5; 
+  border-radius: 4px;
+}
+
+.sidebar h3,
+.sidebar h2 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #2c3e50;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px; 
+  border-radius: 5px; 
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover Effect: Light background color when cursor is over any link */
+.sidebar ul li a:hover {
+  background-color: #ecf0f1; 
+  color: #3498db; 
+}
+
+/* Icon Colors */
+.icon-dashboard {
+  color: #3498db; /* Blue for Dashboard */
+}
+
+.icon-tables {
+  color: #e67e22; /* Orange for Tables */
+}
+
+.icon-billing {
+  color: #2ecc71; /* Green for Billing */
+}
+
+.icon-profile {
+  color: #9b59b6; /* Purple for Profile */
+}
+
+.icon-signin {
+  color: #e74c3c; /* Red for Sign-In */
+}
+
+.icon-signup {
+  color: #f1c40f; /* Yellow for Sign-Up */
+}
+
+
+/* for the image and the 2 buttons css here  */
+.help-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center align horizontally */
+  text-align: center; /* Center text alignment */
+  width: 200px;
+  padding: 10px;
+  background-color: #f9f9f9; 
+  border-radius: 10px; 
+ 
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 200px; /* Limit max width */
+  border-radius: 10px; 
+  margin-bottom: 20px;
+}
+
+.text-section h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.text-section p {
+  font-size: 1em;
+  color: #666; 
+  margin-bottom: 20px; 
+}
+
+.button-section {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 15px; 
+  width: 100%; 
+}
+
+.doc-button, .upgrade-button {
+  padding: 10px;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  color: #fff; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer;
+}
+
+.doc-button {
+  background-color: #000; 
+}
+
+.upgrade-button {
+  background-color: #007bff; 
+}
+
+.doc-button:hover, .upgrade-button:hover {
+  opacity: 0.8; /* Optional: hover effect */
+}

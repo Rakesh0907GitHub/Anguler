@@ -1,0 +1,37 @@
+<header class="header">
+  <button class="hamburger-menu" (click)="toggleSidebar()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</header>
+
+<nav class="sidebar" [ngClass]="{ 'collapsed': !isSidebarOpen }">
+  <div class="logo-section">
+    <img src="assets/logo.png" alt="Sidebar Logo" />
+  </div>
+  <h3 style="margin-left: 35px; cursor: pointer;" routerLink="/dashboard">Project Sidebar</h3>
+  <ul>
+    <li><a routerLink="/dashboard"><mat-icon class="icon-dashboard">dashboard</mat-icon> Dashboard</a></li>
+    <li><a routerLink="/tables"><mat-icon class="icon-tables">table_chart</mat-icon> Tables</a></li>
+    <li><a routerLink="/billing"><mat-icon class="icon-billing">credit_card</mat-icon> Billing</a></li>
+  </ul>
+  <h2>Account Pages</h2>
+  <ul>
+    <li><a routerLink="/profile"><mat-icon class="icon-profile">person</mat-icon> Profile</a></li>
+    <li><a routerLink="/sign-in"><mat-icon class="icon-signin">login</mat-icon> Sign-In</a></li>
+    <li><a routerLink="/sign-up"><mat-icon class="icon-signup">person_add</mat-icon> Sign-Up</a></li>
+  </ul>
+
+  <div class="help-container">
+    <div class="image-section">
+      <img src="assets/file_folder.jpg" alt="Help Image" />
+    </div>
+    <div class="text-section">
+      <h3>Need help?</h3>
+      <p>Please check our docs</p>
+    </div>
+    <div class="button-section">
+      <button class="doc-button">Documentation</button>
+      <button class="upgrade-button">Upgrade to Pro</button>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,545 @@
+
+.billing-container {
+  padding: 20px;
+  background: linear-gradient(
+    to bottom,       /* Gradient direction: top to bottom */
+    #16c1f1 20%,     /* Blue color covering the top 30% */
+    #ffffff 20%      /* White color starts at 30% */
+  );
+  font-family: Arial, sans-serif;
+  height: 1300px; 
+  
+}
+
+/* honme icon and billing navigation css here  */
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Space between items */
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333; /* Text color */
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  color: #fafafa; /* Blue text for links */
+  display: flex;
+  align-items: center; /* Align icon and text */
+  gap: 5px; /* Space between icon and text */
+}
+
+
+
+.breadcrumbs mat-icon {
+  font-size: 18px; /* Icon size */
+  color: #fffdfd; /* Icon color */
+}
+
+  .billing-header h2 {
+    font-size: 1.5em;
+    margin: 0;
+  }
+  
+ /* for those the navbar class css here  */
+  .notification-nav {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    background-color: #f5f5f5; 
+    padding: 9px 10px; 
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    gap: 15px; 
+    width: 41%;
+  }
+  
+  .notification-tabs button {
+    background-color: #ffffff; 
+    color: #333; 
+    border: none; 
+    border-radius: 20px; 
+    padding: 10px 20px; 
+    font-size: 1rem; 
+    cursor: pointer; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Default shadow */
+  }
+  
+  .notification-tabs button:hover {
+    transform: scale(1.1); 
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2); 
+    background-color: #f9fafb; 
+    color: #fff;
+  }
+  
+/* Credit card css */
+.container {
+   min-height: 10px;
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    width: 400px;
+    height: 250px;
+    color: #fff;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 110%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    width: 100%;
+    height: 80%;
+    background-image: linear-gradient(45deg, #0045c7, #ff2c7d);
+    position: absolute;
+    top: 27px;
+    left: 0;
+    padding: 20px 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.map-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.card-no {
+  font-size: 19px;
+  margin-top: 10px;
+}
+
+.card-holder {
+    font-size: 11px;
+    margin-top: 15px;
+}
+
+.name {
+  font-size: 11px;
+  margin-top: 9px;
+}
+
+.bar {
+    background: #222;
+    margin-left: -30px;
+    margin-right: -30px;
+    height: 60px;
+    margin-top: 10px;
+}
+
+.card-cvv {
+    margin-top: 20px;
+}
+
+.card-cvv div {
+    flex: 1;
+}
+
+.card-cvv img {
+    width: 100%;
+    display: block;
+    line-height: 0;
+}
+
+.card-cvv p {
+    background: #fff;
+    color: #000;
+    font-size: 12px;
+    padding: 10px 20px;
+}
+
+.card-text {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.signature {
+    margin-top: 30px;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-inner {
+    transform: rotateY(-180deg);
+}
+
+
+  /*Fir those 3 small rectangle bheems class css here  */
+  .container2 {
+    display: flex;
+    padding: 0;
+    position: relative;
+    right: -460px;
+    top: -220px;
+    gap: 10px; 
+    width: max-content; 
+  }
+  
+  
+  .salary, .paypal {
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 0 1 auto; 
+    width: 3.5cm; 
+    height: 6cm; 
+    margin: 0.5 0.8cm; /* Adds a small gap between items */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2cm; /* Rounded corners in centimeters */
+  }
+.icon {
+  font-size: 26px;
+  color: #4caf50;
+  margin-right: 11 px;
+  margin-top: -12px;
+}
+
+.paypal .icon {
+  color: #0070ba; 
+}
+
+.details h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.details p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+
+/* Invoics class css start here */
+.invoices {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 7.5cm;
+  height: 14cm;
+  border-radius: 0.2cm;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+
+  position: relative; /* Enables positioning */
+  top: -450px; 
+  left: 780px; 
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.view-all {
+  background-color: #4caf50; /* Green color for the button */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.invoice-data {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; /* Adjust space between items */
+  font-size: 0.9rem;
+}
+.invoice-info {
+ 
+  flex-direction: column; 
+  
+}
+.invoice-date {
+  font-weight: bold;
+  margin-right: 28px;
+  color:#2c3e50; 
+ 
+}
+
+.invoice-id {
+  margin-right: 10px; 
+}
+
+.amount-pdf {
+  display: flex;
+  align-items: center;
+  gap: 3px; 
+}
+
+.amount {
+  margin-right: 15px; 
+}
+
+.pdf-icon {
+  font-size: 20px; 
+  color: red;
+}
+
+.pdf-text {
+  color: black;
+  font-weight: bold; 
+}
+
+
+/*Paymenet class whre visa and mastercard here  css start here  */
+.payment-info {
+  display: inline-block;
+  padding: 43px;
+  position: relative;
+  top: -650px; 
+  width: 720px;
+  background-color: #ffffff; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  border-radius: 5px; 
+}
+
+.payment-header {
+  display: flex;
+  justify-content: flex-start; /* Aligns items to the start of the row */
+  align-items: center;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  gap: 380px; 
+}
+
+.payment-title {
+  margin-right: 5px;
+  color:#2c3e50; 
+  font-weight: bold;
+}
+
+.add-new-card {
+  padding: 15px 12px;
+  background-color: #020d18;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.cards-container {
+  display: flex;
+  flex-direction: row; /* Arranges the cards side by side */
+  gap: 90px; 
+  justify-content: flex-start; /* Aligns the cards to the left */
+  flex-wrap: wrap; /* Ensures cards wrap to the next row if space is limited */
+}
+
+.payment-card {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+
+
+.card-logo {
+  font-size: 30px;
+}
+
+.card-number {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.edit-icon {
+  cursor: pointer;
+  color: #080808;
+}
+
+/* mmmmmmmmmm */
+  .billing-info .billing-card {
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .transactions .transaction-item {
+    padding: 10px;
+    margin-top: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+ 
+  /* Billign calss css here  */
+  .billing-info-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    margin: -600px auto 20px auto; 
+    margin-left: 0;
+}
+
+.billing-info-container h2 {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.billing-info-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+}
+
+.billing-info-details p {
+    margin: 5px 0;
+}
+
+.billing-info-actions {
+    display: flex;
+    flex-direction: vertical;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.edit-action, .delete-action {
+    background-color: #fbfcfd;
+    color: rgb(11, 11, 11);
+    border: none;
+   
+    border-radius: 5px;
+    margin: 5px 0;
+    display: flex;
+   
+    cursor: pointer;
+}
+
+
+
+.edit-action mat-icon, .delete-action mat-icon {
+    margin-right: 8px;
+}
+
+.delete-action {
+    background-color: #fbf9f8;
+    color: #fa0606;
+}
+
+
+
+  /* Transaction class container css here  */
+  .transactions-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+   
+    margin: -565px auto 20px auto; 
+    margin-right: 0;
+}
+
+
+.transactions-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.calendar-icon {
+  font-size: 20px; 
+  margin-right: -20px;
+  color: #2c3e50; 
+  vertical-align: middle; 
+}
+
+
+.date-range {
+  font-size: 1.0rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.transaction-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+
+.transaction-row span {
+    margin-right: 10px;
+}
+
+.transaction-row strong {
+    font-weight: bold;
+}
+.transaction-row {
+  margin-bottom: 37px; /* Adjust the spacing as needed */
+}
+.transaction-row span {
+    color: black;
+}
+.transactions-title {
+  font-size: 1.0rem;
+  font-weight: bold;
+  color: #2c3e50; /* Dark color for title */
+}
+.transaction-details {
+  display: flex;
+  flex-direction: column; /* Stacks elements vertically */
+  align-items: flex-start; /* Aligns text to the left */
+  gap: 1px;
+  line-height: 0.5; 
+  padding: 2px;
+  margin-left: 12px;
+}

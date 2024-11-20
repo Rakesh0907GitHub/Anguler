@@ -1,0 +1,200 @@
+<div class="dashboard">
+  <!-- <div class="breadcrumbs">
+        <a href="#">Home</a> / <a href="#">Billing</a>
+      </div> -->
+      <div class="billing-header">
+        <div class="breadcrumbs">
+          <a href="#">
+            <mat-icon>home</mat-icon>
+          </a> / 
+          <a href="#">Dashboard</a>
+        </div>
+        <h2 style="color: white;">Dashboard</h2>
+        
+      </div>
+  <div class="dashboard-content">
+    <!-- Add your dashboard elements here like cards, stats, etc. -->
+    <div class="stat-card">
+      <div>
+        <strong>TODAY'S MONEY</strong><br>
+        <b>$53,000</b> <br>
+        <span style="color: green; font-weight: bold;">+55%</span> since yesterday
+      </div>
+      <!-- Image on the right side -->
+      <img src="assets/db.png" alt="Image" class="right-image">
+    </div>
+    
+    
+    <div class="stat-card">
+      <div>
+       <strong>TODAY'S USERS</strong> <br>
+        <b>2300</b> <br>
+        <span style="color: green; font-weight: bold;">+3%</span> since last week
+      </div>
+      <!-- Image on the right side -->
+      <img src="assets/db1.png" alt="Image" class="right-image">
+    </div>
+    <div class="stat-card">
+      <div>
+        <strong> NEW CLIENTS</strong>
+       <br>
+        <b>+3,462</b> <br>
+        <span style="color: rgb(253, 20, 3); font-weight: bold;">-2%</span> since last quater
+      </div>
+      <!-- Image on the right side -->
+      <img src="assets/db3.png" alt="Image" class="right-image">
+    </div>
+    <div class="stat-card">
+      <div>
+        <strong>SALES</strong>
+        <br>
+        <b>$103,430</b> <br>
+        <span style="color: green; font-weight: bold;">+3%</span> tham last month
+      </div>
+      <!-- Image on the right side -->
+      <img src="assets/db4.png" alt="Image" class="right-image">
+    </div>
+
+    <!-- Add more cards based on the design -->
+  </div>
+  <!-- Reactive Form Section -->
+  <div class="form-carousel-wrapper">
+
+    <div class="form-container">
+      <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <div>
+          <label for="name">Name<span style="color: red;">*</span></label>
+          <input id="name" formControlName="name" />
+          <div *ngIf="reactiveForm.get('name')?.invalid && reactiveForm.get('name')?.touched">
+            <small *ngIf="reactiveForm.get('name')?.errors?.['required']">*Name is required</small>
+            <small *ngIf="reactiveForm.get('name')?.errors?.['minlength']">*Must be at least 3 characters.</small>
+            <small *ngIf="reactiveForm.get('name')?.errors?.['maxlength']">*Cannot exceed 10 characters.</small>
+          </div>
+        </div>
+        <div>
+          <label for="mobileNumber">Mobile Number</label>
+          <input id="mobileNumber" formControlName="mobileNumber" />
+          <small *ngIf="reactiveForm.get('mobileNumber')?.errors?.['minlength']">*Mobile Number must be exactly 10
+            digits.</small>
+          <small *ngIf="reactiveForm.get('mobileNumber')?.errors?.['maxlength']">*Mobile Number must be exactly 10
+            digits.</small>
+        </div>
+  
+        <div>
+          <label for="email">Email<span style="color: red;">*</span></label>
+          <input id="email" formControlName="email" />
+          <div *ngIf="reactiveForm.get('email')?.invalid && reactiveForm.get('email')?.touched">
+            <small *ngIf="reactiveForm.get('email')?.errors?.['required']">*Email is required.</small>
+            <small *ngIf="reactiveForm.get('email')?.errors?.['email']">*Invalid email format.</small>
+          </div>
+        </div>
+  
+        <button type="submit" [disabled]="!reactiveForm.valid">
+          {{ editIndex !== null ? 'Update' : 'Submit' }}
+        </button>
+      </form>
+      
+    </div>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="carousel-images">
+          <div *ngFor="let img of carouselImages; let i = index"
+               class="carousel-image"
+               [ngClass]="{ 'active': i === currentImageIndex }">
+            <img [src]="img" alt="Carousel Image {{i + 1}}">
+          </div>
+        </div>
+        <div class="arrow left-arrow" (click)="prevImage()">
+          <mat-icon>chevron_left</mat-icon>
+        </div>
+        <div class="arrow right-arrow" (click)="nextImage()">
+          <mat-icon>chevron_right</mat-icon>
+        </div>
+      </div>
+    </div>
+     <!-- Carousel Section beside the Form Container -->
+     
+  </div>
+
+  <div class="dashboard-container">
+    <!-- Sales by Country Section -->
+    <section class="sales-by-country">
+      <h3>Sales by Country</h3>
+      <table>
+        <tr style="color: #666;">
+          <th>Country</th>
+          <th>Sales</th>
+          <th>Value</th>
+          <th>Bounce</th>
+        </tr>
+        <tr style="color: #666;">
+          <td><img src="assets/usa.png" alt="USA Flag" /> United States</td>
+          <td>2500</td>
+          <td>$230,900</td>
+          <td>29.9%</td>
+        </tr>
+        <tr style="color: #666;">
+          <td><img src="assets/germany.png" alt="Germany Flag" /> Germany</td>
+          <td>3,900</td>
+          <td>$440,000</td>
+          <td>40.22%</td>
+        </tr>
+        <tr style="color: #666;">
+          <td><img src="assets/uk.png" alt="UK Flag" /> Great Britain</td>
+          <td>1,400</td>
+          <td>$190,700</td>
+          <td>23.44%</td>
+        </tr>
+        <tr style="color: #666;">
+          <td><img src="assets/brazil.png" alt="Brazil Flag" /> Brasil</td>
+          <td>562</td>
+          <td>$143,960</td>
+          <td>32.14%</td>
+        </tr>
+      </table>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+      <h3>Categories</h3>
+      <div class="category-item">
+        <span class="category-icon">📱</span>
+        <div>
+          <span class="category-name" style="font-weight: bold;color: #666;">Devices</span><br>
+          <span style="font-weight: normal;color: #666;">250 in stock, 346+ sold</span>
+        </div>
+
+        <a href="#" class="category-link">→</a>
+      </div>
+      <div class="category-item">
+        <span class="category-icon">🎫</span>
+        <div>
+          <span class="category-name" style="font-weight: bold;color: #666;">Tickets</span><br>
+          <span style="font-weight: normal;color: #666;">123 closed, 15 open</span>
+        </div>
+
+        <a href="#" class="category-link">→</a>
+      </div>
+      <div class="category-item">
+        <span class="category-icon">🛠️</span>
+        <div>
+          <span class="category-name" style="font-weight: bold; color: #666;">Error logs</span><br>
+          <span style="font-weight: normal; color: #666;">1 is active, 40 closed</span>
+        </div>
+
+        <a href="#" class="category-link">→</a>
+      </div>
+      <div class="category-item">
+        <span class="category-icon">😊</span>
+        <div>
+          <span class="category-name" style="font-weight: bold;color: #666;">Happy Users</span><br>
+          <span style="font-weight: normal;color: #666;">+430</span>
+        </div>
+
+        <a href="#" class="category-link">→</a>
+      </div>
+    </section>
+  </div>
+
+
+</div>

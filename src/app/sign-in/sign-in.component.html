@@ -1,0 +1,58 @@
+<div class="main-container">
+<!-- this is the the bar where the i lined up horixontally(dashboard, signin and alll) -->
+    <div class="header-row">
+        <div class="left-section">
+            <h3 routerLink="/dashboard" style="cursor: pointer;"><strong>Project</strong></h3>
+        </div>
+        <div class="middle-section">
+            <div class="menu-item" routerLink="/dashboard">
+                <mat-icon>dashboard</mat-icon> Dashboard
+            </div>
+            <div class="menu-item" routerLink="/profile">
+                <mat-icon>person</mat-icon> Profile
+            </div>
+            <div class="menu-item" routerLink="/sign-in">
+                <mat-icon>login</mat-icon> Sign In
+            </div>
+            <div class="menu-item" routerLink="/sign-up">
+                <mat-icon>person_add</mat-icon> Sign Up
+            </div>
+        </div>
+        <div class="right-section">
+            <button class="download-button">Free Download</button>
+        </div>
+    </div>
+<!-- this is the sign in class on left side  -->
+    <div class="sign-in-container">
+        <h2>Sign In</h2>
+        <p class="subtitle">Enter your email and password to sign in</p>
+
+        <div class="input-container">
+            <input type="email" placeholder="Email" class="input-box" />
+            <input type="password" placeholder="Password" class="input-box" />
+        </div>
+
+        <div class="toggle-container">
+            <label class="toggle-switch">
+                <input type="checkbox">
+                <span class="slider"></span>
+            </label>
+            <span class="remember-me">Remember Me</span>
+        </div>
+
+        <button class="sign-in-button">Sign In</button>
+
+        <p class="login-text">
+            Don't have an account?  
+            <span class="sign-in-link" routerLink="/sign-up" style="cursor: pointer; color: blue; font-weight: bold;">
+              Sign Up
+            </span>
+          </p>
+          
+    </div>
+<!-- tnhis is the image for posting on the right side  -->
+    <div class="image-container">
+        <img src="assets/sign-in.jpg" alt="Descriptive Text">
+    </div>
+
+</div>

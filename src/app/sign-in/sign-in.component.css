@@ -1,0 +1,228 @@
+
+.main-container {
+  
+    margin: -10px auto; /* Center horizontally */
+    padding: 8px; /* Add padding for spacing */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    gap: 2px; /* Add space between sections */
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #ddd; /* Optional border */
+    border-radius: 10px; /* Rounded corners */
+    height: 700px;
+    
+}
+
+
+/* Styling the header-row container */
+.header-row {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center; /* Center vertically */
+    padding: 10px 20px;
+    background: linear-gradient(to right, white 30%, #9ed7f2 70%);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
+    position: relative; 
+    top: 43px;
+  }
+  
+  /* Left section styles */
+  .left-section, .middle-section, .right-section {
+    display: flex;
+    align-items: center; /* Center vertically */
+  }
+  
+  /* General menu item style */
+  .menu-item {
+    display: flex;
+    align-items: center;
+    margin-right: 15px; 
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333; 
+    cursor: pointer;
+  }
+  
+  .menu-item mat-icon {
+    margin-right: 5px;
+    color: #555;
+  }
+  
+  /* Right section button styles */
+  .download-button {
+    background-color: #007bff; 
+    color: #fff; 
+    padding: 10px 20px; 
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: none; /* Remove default border */
+    border-radius: 5px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-button:hover {
+    background-color: #0056b3; 
+  }
+  
+
+
+  /* Sign in class container css here */
+.sign-in-container {
+    width: 400px;
+    
+    margin: 165px auto;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+   
+    background-color: #fff;
+    margin-left: 20px;
+
+  }
+  
+  /* Title styling */
+  .sign-in-container h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  /* Subtitle styling */
+  .subtitle {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  /* Input field container */
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    margin-bottom: 29px;
+  }
+  
+  /* Input box styling */
+  .input-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  .input-box:focus {
+    border-color: #16c1f1;
+  }
+  
+  /* Toggle switch styling */
+  .toggle-container {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    margin-bottom: 20px;
+  }
+  
+  .toggle-switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .toggle-switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: 0.4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #16c1f1;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(14px);
+  }
+  
+  .remember-me {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  /* Sign-in button styling */
+  .sign-in-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #16c1f1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .sign-in-button:hover {
+    background-color: #1395c4;
+  }
+  
+  /* Sign-up text styling */
+  .sign-up-text {
+    font-size: 14px;
+    color: #666;
+   margin-top: 12px;
+  }
+  
+  .sign-up-link {
+    font-weight: bold;
+    color: #16c1f1;
+    text-decoration: none;
+  }
+  
+  .sign-up-link:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* right side iamge css here  */
+  .image-container {
+    width: 17cm;
+    height: 10cm;
+    border: 1px solid #ccc;
+  
+    border-radius: 10px; 
+    position: relative; /* Allows manual adjustment using top and left */
+    top: -535px; 
+    left: 450px; 
+}
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; 
+    
+}
